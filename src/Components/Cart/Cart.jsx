@@ -37,12 +37,12 @@ const Cart = () => {
             return (
               <div
                 key={value.id}
-                className=" relative overflow-hidden gap-3 xl:h-[440px] lg:h-[430px] sm:h-[400px]  h-[350px]   rounded-2xl cursor-pointer hover:bg-gray-900"
+                className=" relative overflow-hidden gap-3 xl:h-[540px] lg:h-[430px] md:h-[410px] sm:h-[400px]  h-[350px]   rounded-2xl cursor-pointer hover:bg-gray-900"
               >
                 <div className="rounded-3xl">
                   <img
                     src={value.img}
-                    className="object-contain w-full  h-[150px] rounded-3xl "
+                    className="object-contain w-full xl:h-[300px]  h-[150px] rounded-3xl "
                     alt="img"
                   />
                 </div>
