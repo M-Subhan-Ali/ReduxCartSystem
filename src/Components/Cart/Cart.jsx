@@ -20,7 +20,7 @@ const Cart = () => {
   if (ProductData < 1) {
     return (
       <main>
-        <div className="text-3xl px-20 my-5 font-bold flex justify-center items-center mt-[15%]">
+        <div className="text-3xl px-20 my-5  font-bold flex justify-center items-center mt-[15%]">
           <div>
             <h1>Your Cart is Empty & Clear!</h1>
           </div>
@@ -32,27 +32,27 @@ const Cart = () => {
   return (
     <div className="grid justify-center items-center mt-[13%]">
       <div className="container mx-auto bg-gray-800  text-white rounded-2xl overflow-hidden my-10">
-        <div className="grid grid-cols-4 gap-4 overflow-hidden">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 overflow-hidden">
           {ProductData.map((value) => {
             return (
               <div
                 key={value.id}
-                className=" relative overflow-hidden gap-3 h-[520px]  rounded-2xl cursor-pointer hover:bg-gray-900"
+                className=" relative overflow-hidden gap-3 xl:h-[440px] lg:h-[430px] sm:h-[400px]  h-[350px]   rounded-2xl cursor-pointer hover:bg-gray-900"
               >
                 <div className="rounded-3xl">
                   <img
                     src={value.img}
-                    className="object-contain w-full  h-[250px] rounded-3xl "
+                    className="object-contain w-full  h-[150px] rounded-3xl "
                     alt="img"
                   />
                 </div>
                 <div className="flex flex-col  justify-center items-center">
-                  <h1 className="text-4xl px-10 text-center py-2">
+                  <h1 className="sm:text-3xl text-xl px-10 text-center py-2">
                     {value.title}
                   </h1>
-                  <h2 className="text-2xl">${value.price}</h2>
+                  <h2 className="sm:text-2xl text-lg">${value.price}</h2>
                 </div>
-                <div className="flex gap-5 justify-center items-center py-4">
+                <div className="absolute bottom-14 xl:left-[26%] md:left-[24%] sm:left-[27%] left-[24%] flex gap-5 justify-center items-center py-4">
                   <div
                     onClick={() => {
                       if (value.amount === 1) {
@@ -63,12 +63,12 @@ const Cart = () => {
                     }}
                     className="w-10 h-10 rounded-md hover:bg-red-500 flex justify-center items-center"
                   >
-                    <button className="text-2xl justify-center items-center pb-1  ">
+                    <button className="sm:text-2xl text-xl justify-center items-center pb-1  ">
                       -
                     </button>
                   </div>
                   <div>
-                    <h1 className="text-3xl">{value.amount}</h1>
+                    <h1 className="sm:text-3xl text-xl">{value.amount}</h1>
                   </div>
                   <div
                     onClick={() => {
@@ -76,14 +76,14 @@ const Cart = () => {
                     }}
                     className="w-10 h-10 rounded-md hover:bg-green-500 flex justify-center items-center"
                   >
-                    <button className="text-2xl flex justify-center items-center pb-1 ">
+                    <button className="sm:text-2xl text-xl flex justify-center items-center pb-1 ">
                       +
                     </button>
                   </div>
                 </div>
                 <div
                   onClick={() => dispatch(Remove(value.id))}
-                  className="absolute left-[35%] bottom-5 flex justify-center items-center mx-auto py-3 rounded-2xl hover:bg-red-500 w-[100px] border border-red-500"
+                  className="absolute xl:left-[35%]  left-[30%] bottom-5 flex justify-center items-center mx-auto py-3 rounded-2xl hover:bg-red-500 w-[100px] border border-red-500"
                 >
                   <button>Remove</button>
                 </div>
