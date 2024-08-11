@@ -104,7 +104,7 @@ const Cart = () => {
         onClick={() => {
           dispatch(open());
         }}
-        className="flex w-[20vw] justify-center items-center bg-red-400 hover:bg-red-600 rounded-xl mx-auto mb-10"
+        className="flex sm:w-[20vw] w-[40vw] justify-center items-center bg-red-400 hover:bg-red-600 rounded-xl mx-auto mb-10"
       >
         <button className="py-3 px-5 flex justify-center items-center text-white">
           Clear All
